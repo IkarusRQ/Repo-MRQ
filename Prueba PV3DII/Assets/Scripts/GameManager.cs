@@ -10,6 +10,8 @@ public class GameManager : MonoBehaviour
     public Text textoTitulo;
     public Text textoPlayer;
     public InputField textoJugador;
+
+    public GameObject panelUI; 
     // Start is called before the first frame update
     void Start()
     {
@@ -32,7 +34,10 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if(Input.GetKeyUp(KeyCode.Escape)){
+
+            panelUI.SetActive(true);
+        }
     }
 
     void cargaDatos(){
