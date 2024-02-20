@@ -1,7 +1,11 @@
 {
-    "nombre_juego": "Juego Shooter",
-    "nombre_jugador": "Andres",
-    "nivel": 1,
+    "nombre_juego": "Joggo d'video",
+    "nombre_jugador": "fd",
+    "nombre_equipo": "we",
+    "nivel": "1",
+    "experiencia": 200,
     "salud": 100,
-    "correo": ""
+    "stamina": 100,
+    "correo": "jroppy@correo.nz",
+    "volumen": 68.0
 }

@@ -9,7 +9,12 @@ public class GameManager : MonoBehaviour
     public DataJSON misDatos;
     public Text textoTitulo;
     public Text textoPlayer;
+    public Text textoEquipo;
+    public Text textoNivel;
     public InputField textoJugador;
+    public InputField textoTeam;
+
+    public Slider volumen;
 
     public GameObject panelUI; 
     // Start is called before the first frame update
@@ -44,9 +49,15 @@ public class GameManager : MonoBehaviour
         GameObject.Find("t_titulo").GetComponent<Text>().text = misDatos.nombre_juego;
         textoTitulo.text = misDatos.nombre_juego;
         textoPlayer.text = misDatos.nombre_jugador;
+        textoEquipo.text = misDatos.nombre_equipo;
+        textoNivel.text = misDatos.nivel;
+        volumen.value = misDatos.volumen;
+        
     }
     public void guardaDatos(){
         misDatos.nombre_jugador = textoJugador.text;
+        misDatos.nombre_equipo = textoTeam.text;
+        misDatos.volumen = volumen.value;
         string filePat = Application.streamingAssetsPath + "/" + "data1.json";
         string s = JsonUtility.ToJson(misDatos, true);
         File.WriteAllText(filePat, s);
